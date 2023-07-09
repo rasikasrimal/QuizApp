@@ -13,10 +13,15 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: Set up Dart SDK
+        uses: dart-lang/setup-dart@v1
+        with:
+          dart-sdk: '3.0.5'
+
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '2.x' # Specify the version of Flutter you want to use
+          flutter-version: '2.10.0' # Replace with the latest Flutter version
 
       - name: Install dependencies
         run: flutter pub get
