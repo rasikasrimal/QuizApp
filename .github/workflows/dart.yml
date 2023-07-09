@@ -2,8 +2,8 @@ name: Dart
 
 on:
   pull_request:
-    branches: 
-      -master
+    branches:
+      - master
 
 jobs:
   flutter_test:
@@ -11,18 +11,24 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
-      - name: actions/setup-java@v1
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Dart SDK
+        uses: dart-lang/setup-dart@v1
         with:
           dart-sdk: '2.16.2'
 
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
-          java version: "12.x"
-        uses: subosito/flutter-action@v1
-        with:
-          channel: 'stable'
-        -run: flutter pub get
-        -run: flutter analyze
-        -run: flutter test  
+          flutter-version: '2.10.5'
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Analyze project
+        run: flutter analyze
+
+      - name: Run tests
+        run: flutter test
