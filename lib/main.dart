@@ -5,16 +5,16 @@ void main() {
   runApp(MaterialApp(
     home: Scaffold(
       body: Container(
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
               gradient: LinearGradient(
             colors: [
-              const Color.fromARGB(255, 93, 34, 196),
-              Color.fromARGB(255, 120, 79, 190),
+              Color.fromARGB(255, 183, 235, 255),
+              Color.fromARGB(255, 174, 137, 238),
             ],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
           )),
-          child: StartScreen()),
+          child: const StartScreen()),
     ),
   ));
 }
