@@ -8,7 +8,7 @@ class StartScreen extends StatelessWidget {
     return Center(
       child: Column(
         children: [
-          Image.asset('assets/images/quiz-logo.png'),
+          Image.asset('assests/images/quiz-logo.png'),
         ],
       ),
     );
