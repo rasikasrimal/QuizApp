@@ -31,7 +31,9 @@ class StartScreen extends StatelessWidget {
               )),
           const SizedBox(height: 20),
           OutlinedButton.icon(
-              onPressed: () {},
+              onPressed: () {
+                //...
+              },
               style: OutlinedButton.styleFrom(
                 foregroundColor: Colors.white,
                 side:
