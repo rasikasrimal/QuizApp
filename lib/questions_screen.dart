@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/answer_button.dart';
 import 'package:flutter_application_1/data/questions.dart';
-import 'package:flutter_application_1/question_text.dart';
+//import 'package:flutter_application_1/question_text.dart';
 
 class QuestionScreen extends StatefulWidget {
   const QuestionScreen({super.key});
