@@ -12,7 +12,7 @@ class QuestionText extends StatelessWidget {
       child: Text(
         answerText,
         style: const TextStyle(
-          fontSize: 25,
+          fontSize: 28, //question text font size
           fontFamily: 'helvetica',
           fontWeight: FontWeight.bold,
           color: AppColors.primaryColor,
@@ -51,7 +51,7 @@ class AnswerButton extends StatelessWidget {
           child: Text(
             answerText,
             style: const TextStyle(
-              fontSize: 20,
+              fontSize: 18, //answer button font size
               fontFamily: 'helvetica',
               fontWeight: FontWeight.bold,
               color: Colors.white,

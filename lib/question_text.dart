@@ -11,7 +11,7 @@ class QuestionText extends StatelessWidget {
       child: Text(
         answerText,
         style: const TextStyle(
-          fontSize: 25,
+          fontSize: 10,
           fontFamily: 'helvetica',
           fontWeight: FontWeight.bold,
           color: AppColors.primaryColor,
