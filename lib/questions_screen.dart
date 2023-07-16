@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/answer_button.dart';
+import 'package:flutter_application_1/question_text.dart';
 
 class QuestionScreen extends StatefulWidget {
   const QuestionScreen({super.key});
@@ -12,49 +14,17 @@ class QuestionScreen extends StatefulWidget {
 class _QuestionScreenState extends State<QuestionScreen> {
   @override
   Widget build(context) {
-    return SizedBox(
+    return const SizedBox(
       width: double.infinity,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const Text('The Question...',
-              style: TextStyle(
-                fontSize: 24,
-                fontFamily: 'helvetica',
-                fontWeight: FontWeight.bold,
-                color: Color.fromARGB(255, 17, 6, 82),
-              )),
-          const SizedBox(height: 30),
-          ElevatedButton(
-            onPressed: () {},
-            child: const Text('Answer 1',
-                style: TextStyle(
-                  fontSize: 16,
-                  fontFamily: 'helvetica',
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                )),
-          ),
-          ElevatedButton(
-            onPressed: () {},
-            child: const Text('Answer 2',
-                style: TextStyle(
-                  fontSize: 16,
-                  fontFamily: 'helvetica',
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                )),
-          ),
-          ElevatedButton(
-            onPressed: () {},
-            child: const Text('Answer 3',
-                style: TextStyle(
-                  fontSize: 16,
-                  fontFamily: 'helvetica',
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                )),
-          ),
+          QuestionText('The Question...'),
+          SizedBox(height: 30),
+          AnswerButton('Answer 1'),
+          AnswerButton('Answer 2'),
+          AnswerButton('Answer 3'),
+          AnswerButton('Answer 4'),
         ],
       ),
     );
