@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/start_screen.dart';
 import 'package:flutter_application_1/questions_screen.dart';
+import 'constants/app_colors.dart';
 
 class Quiz extends StatefulWidget {
   Quiz({super.key});
@@ -28,8 +29,8 @@ class _QuizState extends State<Quiz> {
           decoration: const BoxDecoration(
               gradient: LinearGradient(
             colors: [
-              Color.fromARGB(255, 183, 235, 255),
-              Color.fromARGB(255, 174, 137, 238),
+              AppColors.bgColor1,
+              AppColors.bgColor2,
             ],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,

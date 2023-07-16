@@ -1,4 +1,27 @@
 import 'package:flutter/material.dart';
+import 'constants/app_colors.dart';
+
+class QuestionText extends StatelessWidget {
+  const QuestionText(this.answerText, {Key? key}) : super(key: key);
+  final String answerText;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(10.0),
+      child: Text(
+        answerText,
+        style: const TextStyle(
+          fontSize: 25,
+          fontFamily: 'helvetica',
+          fontWeight: FontWeight.bold,
+          color: AppColors.primaryColor,
+        ),
+        textAlign: TextAlign.center, // Center-align the text
+      ),
+    );
+  }
+}
 
 class AnswerButton extends StatelessWidget {
   const AnswerButton({Key? key, required this.answerText, required this.onTap})
@@ -9,37 +32,33 @@ class AnswerButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
-      onPressed: onTap,
-      style: ButtonStyle(
-        backgroundColor:
-            MaterialStateProperty.all<Color>(Color.fromARGB(255, 12, 0, 63)),
-        //buttonColor is here
-        /*MaterialStateProperty.all<Gradient>(
-          LinearGradient(
-            colors: [
-              Colors.white,
-              Colors.red,
-            ],
+    return Align(
+      alignment: Alignment.center,
+      child: Container(
+        width: double.infinity,
+        padding: const EdgeInsets.all(10.0),
+        child: ElevatedButton(
+          onPressed: onTap,
+          style: ButtonStyle(
+            backgroundColor:
+                MaterialStateProperty.all<Color>(AppColors.primaryColor),
+            shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+              RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(18.0),
+              ),
+            ),
           ),
-        ),*/
-        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-          RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(18.0),
-            //side: const BorderSide(color: Colors.white))),
+          child: Text(
+            answerText,
+            style: const TextStyle(
+              fontSize: 15,
+              fontFamily: 'helvetica',
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+            ),
           ),
-        ),
-        padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
-          const EdgeInsets.symmetric(vertical: 10, horizontal: 40),
         ),
       ),
-      child: Text(answerText,
-          style: const TextStyle(
-            fontSize: 15,
-            fontFamily: 'helvetica',
-            fontWeight: FontWeight.bold,
-            color: Colors.white,
-          )),
     );
   }
 }
