@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'constants/app_colors.dart';
 
 class StartScreen extends StatelessWidget {
   const StartScreen(this.startQuiz, {super.key});
@@ -17,27 +18,29 @@ class StartScreen extends StatelessWidget {
             color: Color.fromARGB(255, 255, 255, 255),
           ),*/
           Opacity(
-            opacity: 0.8,
+            opacity: 1,
             child: Image.asset(
               'assests/images/quiz-logo.png',
               width: 300,
             ),
           ),
           const SizedBox(height: 20),
-          const Text("Learn Flutter the fun way!",
-              style: TextStyle(
-                fontSize: 24,
-                fontFamily: 'helvetica',
-                fontWeight: FontWeight.bold,
-                color: Colors.white,
-              )),
+          const Padding(
+            padding: Paddings.myPadding,
+            child: Text("Learn Flutter the fun way!",
+                style: TextStyle(
+                  fontSize: 30,
+                  fontFamily: 'helvetica',
+                  fontWeight: FontWeight.bold,
+                  color: AppColors.primaryColor,
+                )),
+          ),
           const SizedBox(height: 20),
           OutlinedButton.icon(
               onPressed: startQuiz,
               style: OutlinedButton.styleFrom(
-                foregroundColor: Colors.white,
-                side:
-                    const BorderSide(color: Color.fromARGB(255, 255, 255, 255)),
+                foregroundColor: AppColors.primaryColor,
+                side: const BorderSide(color: AppColors.primaryColor, width: 2),
               ),
               icon: const Icon(Icons.arrow_right_alt),
               label: const Text('Start Quiz',
@@ -45,7 +48,7 @@ class StartScreen extends StatelessWidget {
                     fontSize: 24,
                     fontFamily: 'helvetica',
                     fontWeight: FontWeight.bold,
-                    color: Color.fromARGB(255, 255, 255, 255),
+                    color: AppColors.primaryColor,
                   )))
         ],
       ),

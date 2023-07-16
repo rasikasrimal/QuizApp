@@ -36,7 +36,7 @@ class AnswerButton extends StatelessWidget {
       alignment: Alignment.center,
       child: Container(
         width: double.infinity,
-        padding: const EdgeInsets.all(10.0),
+        padding: Paddings.myPadding,
         child: ElevatedButton(
           onPressed: onTap,
           style: ButtonStyle(
@@ -51,7 +51,7 @@ class AnswerButton extends StatelessWidget {
           child: Text(
             answerText,
             style: const TextStyle(
-              fontSize: 15,
+              fontSize: 20,
               fontFamily: 'helvetica',
               fontWeight: FontWeight.bold,
               color: Colors.white,
