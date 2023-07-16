@@ -11,7 +11,7 @@ class QuestionText extends StatelessWidget {
         fontSize: 25,
         fontFamily: 'helvetica',
         fontWeight: FontWeight.bold,
-        color: Colors.white,
+        color: Color.fromARGB(255, 39, 0, 145),
       ),
     );
   }
