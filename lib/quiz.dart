@@ -3,6 +3,7 @@ import 'package:flutter_application_1/data/questions.dart';
 import 'package:flutter_application_1/start_screen.dart';
 import 'package:flutter_application_1/questions_screen.dart';
 import 'constants/app_colors.dart';
+import 'package:flutter_application_1/results_screen.dart';
 
 class Quiz extends StatefulWidget {
   const Quiz({Key? key});
@@ -30,7 +31,7 @@ class _QuizState extends State<Quiz> {
     if (selectedAnswers.length == questions.length) {
       // If all questions have been answered, show the results
       setState(() {
-        activeScreen = 'start-screen';
+        activeScreen = 'results-screen';
       });
     }
   }
@@ -43,6 +44,10 @@ class _QuizState extends State<Quiz> {
       screenWidget = QuestionScreen(
         onSelectAnswer: chooseAnswer,
       );
+    }
+
+    if (activeScreen == 'results-screen') {
+      screenWidget = const ResultsScreen();
     }
 
     return MaterialApp(
