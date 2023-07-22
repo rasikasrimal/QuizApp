@@ -4,7 +4,7 @@ import 'package:flutter_application_1/questions_screen.dart';
 import 'constants/app_colors.dart';
 
 class Quiz extends StatefulWidget {
-  Quiz({super.key});
+  const Quiz({super.key});
 
   @override
   State<Quiz> createState() {
