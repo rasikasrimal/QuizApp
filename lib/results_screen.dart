@@ -42,32 +42,67 @@ class ResultsScreen extends StatelessWidget {
         margin: const EdgeInsets.all(40),
         child: Column(
           children: [
-            Text(
-              "You Answered $numCorrectQuestions out of $numTotalQuestions questions correctly!",
-              style: const TextStyle(
-                fontSize: 30,
-                fontWeight: FontWeight.bold,
-                color: AppColors.primaryColor,
+            Padding(
+              padding: EdgeInsets.fromLTRB(
+                0, // left padding
+                MediaQuery.of(context).size.height *
+                    0.1, // top padding (10% of screen height)
+                0, // right padding
+                0, // bottom padding
+              ),
+              child: RichText(
+                text: TextSpan(
+                  children: [
+                    const TextSpan(
+                      text: "You Answered ",
+                      style: TextStyle(
+                        fontSize: 30,
+                        fontWeight: FontWeight.bold,
+                        color: AppColors.primaryColor,
+                      ),
+                    ),
+                    TextSpan(
+                      text: "$numCorrectQuestions",
+                      style: const TextStyle(
+                        fontSize: 30,
+                        fontWeight: FontWeight.bold,
+                        color:
+                            AppColors.textColor1, // Change the color as needed
+                      ),
+                    ),
+                    const TextSpan(
+                      text: " out of ",
+                      style: TextStyle(
+                        fontSize: 30,
+                        fontWeight: FontWeight.bold,
+                        color: AppColors.primaryColor,
+                      ),
+                    ),
+                    TextSpan(
+                      text: "$numTotalQuestions",
+                      style: const TextStyle(
+                        fontSize: 30,
+                        fontWeight: FontWeight.bold,
+                        color:
+                            AppColors.textColor2, // Change the color as needed
+                      ),
+                    ),
+                    const TextSpan(
+                      text: " questions correctly!",
+                      style: TextStyle(
+                        fontSize: 30,
+                        fontWeight: FontWeight.bold,
+                        color: AppColors.primaryColor,
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
             const SizedBox(height: 10),
             QuestionsSummary(summaryData),
             const SizedBox(height: 30),
-            TextButton.icon(
-              onPressed: restartQuiz,
-              style: TextButton.styleFrom(
-                foregroundColor: AppColors.primaryColor,
-              ),
-              icon: const Icon(Icons.refresh),
-              label: const Text(
-                'Restart Quiz',
-                style: TextStyle(
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold,
-                  color: AppColors.primaryColor,
-                ),
-              ),
-            ),
+            RestartButton(onPressed: restartQuiz),
           ],
         ),
       ),

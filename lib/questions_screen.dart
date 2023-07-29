@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/answer_button.dart';
 import 'package:flutter_application_1/data/questions.dart';
+import 'package:flutter_application_1/constants/app_colors.dart';
 
 class QuestionScreen extends StatefulWidget {
   const QuestionScreen({Key? key, required this.onSelectAnswer});
@@ -44,6 +45,15 @@ class _QuestionScreenState extends State<QuestionScreen> {
               },
             );
           }),
+          const SizedBox(height: 20), // Add some spacing after the answers
+          RestartButton(
+            onPressed: () {
+              // Call the restartQuiz function from the parent widget
+              setState(() {
+                currentQuestionIndex = 0; // Reset the question index
+              });
+            },
+          ),
         ],
       ),
     );

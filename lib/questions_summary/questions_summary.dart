@@ -9,7 +9,7 @@ class QuestionsSummary extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 50.0),
+      padding: const EdgeInsets.only(top: 10.0),
       child: Center(
         child: SizedBox(
           height: 400,
@@ -48,14 +48,6 @@ class QuestionsSummary extends StatelessWidget {
                           ),
                           const SizedBox(height: 5),
                           Text(
-                            'Your Answer: $userAnswerText',
-                            style: const TextStyle(
-                              fontSize: 20,
-                              color: Colors.black,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                          Text(
                             'Correct Answer: $correctAnswerText',
                             style: const TextStyle(
                               fontSize: 20,
@@ -63,6 +55,15 @@ class QuestionsSummary extends StatelessWidget {
                               fontWeight: FontWeight.bold,
                             ),
                           ),
+                          Text(
+                            'Your Answer: $userAnswerText',
+                            style: const TextStyle(
+                              fontSize: 20,
+                              color: AppColors.textColor2,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          const SizedBox(height: 20),
                         ],
                       ),
                     ),
