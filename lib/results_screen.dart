@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/data/questions.dart';
 import 'package:flutter_application_1/questions_summary.dart';
+import 'constants/app_colors.dart';
 
 class ResultsScreen extends StatelessWidget {
   const ResultsScreen({
-    super.key,
+    Key? key,
     required this.chosenAnswers,
-  });
+    required this.restartQuiz,
+  }) : super(key: key);
 
   final List<String> chosenAnswers;
+  final VoidCallback restartQuiz;
 
   List<Map<String, Object>> get summaryData {
     final List<Map<String, Object>> summary = [];
@@ -16,9 +19,8 @@ class ResultsScreen extends StatelessWidget {
     for (var i = 0; i < chosenAnswers.length; i++) {
       summary.add(
         {
-          'question_index': i, // 'question_index': 'Question ${i + 1}
+          'question_index': i,
           'question': questions[i].text,
-          //'answer': chosenAnswers[i],
           'correct_answer': questions[i].answers[0],
           'user_answer': chosenAnswers[i]
         },
@@ -41,16 +43,31 @@ class ResultsScreen extends StatelessWidget {
         child: Column(
           children: [
             Text(
-                "You Answered $numCorrectQuestions out of $numTotalQuestions questions correctly!"),
-            const SizedBox(height: 30),
+              "You Answered $numCorrectQuestions out of $numTotalQuestions questions correctly!",
+              style: const TextStyle(
+                fontSize: 30,
+                fontWeight: FontWeight.bold,
+                color: AppColors.primaryColor,
+              ),
+            ),
+            const SizedBox(height: 10),
             QuestionsSummary(summaryData),
             const SizedBox(height: 30),
-            TextButton(
-              onPressed: () {
-                //
-              },
-              child: const Text('Restart Quiz'),
-            )
+            TextButton.icon(
+              onPressed: restartQuiz,
+              style: TextButton.styleFrom(
+                foregroundColor: AppColors.primaryColor,
+              ),
+              icon: const Icon(Icons.refresh),
+              label: const Text(
+                'Restart Quiz',
+                style: TextStyle(
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold,
+                  color: AppColors.primaryColor,
+                ),
+              ),
+            ),
           ],
         ),
       ),
