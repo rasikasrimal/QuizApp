@@ -1,6 +1,5 @@
 # Quiz APP
 
-
 ![App Logo](app_logo.png)
 
 ## Description
@@ -42,9 +41,26 @@ The Quiz App is a mobile application built using Flutter and Dart that allows us
 
 Contributions are welcome! If you have any suggestions or bug reports, please open an issue or create a pull request. For major changes, please open an issue first to discuss the proposed changes.
 
-
 ## Acknowledgments
 
 - The app is inspired by the desire to promote learning and knowledge sharing in a fun and interactive way.
 
+## Upcoming Features
 
+The development team is actively working on implementing exciting new features to enhance the Quiz App:
+
+1. **Login/Sign Up:** Users will be able to create accounts and log in to access personalized features and track their quiz history.
+
+2. **Leaderboard:** A global leaderboard will be added to showcase top-performing users based on their quiz scores.
+
+3. **Verified Moderator Login:** Moderators with verified credentials will be able to log in and manage quizzes and user-generated content.
+
+4. **User-Generated Questions:** Registered users will have the ability to contribute and submit their quiz questions for review.
+
+5. **Question Acceptance:** Designated moderators will review user-submitted questions and approve them for inclusion in quizzes.
+
+We are excited about these upcoming features and are committed to continually improving the Quiz App to provide the best user experience.
+
+If you have any additional feature suggestions or feedback, feel free to share it with us through the issues section.
+
+---
