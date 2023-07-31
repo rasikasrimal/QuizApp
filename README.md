@@ -47,7 +47,7 @@ Contributions are welcome! If you have any suggestions or bug reports, please op
 
 ## Upcoming Features
 
-The development team is actively working on implementing exciting new features to enhance the Quiz App:
+I'm actively working on implementing exciting new features to enhance the Quiz App:
 
 1. **Login/Sign Up:** Users will be able to create accounts and log in to access personalized features and track their quiz history.
 
