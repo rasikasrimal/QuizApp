@@ -59,7 +59,7 @@ I'm actively working on implementing exciting new features to enhance the Quiz A
 
 5. **Question Acceptance:** Designated moderators will review user-submitted questions and approve them for inclusion in quizzes.
 
-We are excited about these upcoming features and are committed to continually improving the Quiz App to provide the best user experience.
+I'm excited about these upcoming features and are committed to continually improving the Quiz App to provide the best user experience.
 
 If you have any additional feature suggestions or feedback, feel free to share it with us through the issues section.
 
