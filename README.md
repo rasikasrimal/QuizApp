@@ -1,7 +1,5 @@
 # Quiz APP
 
-![App Logo](app_logo.png)
-
 ## Description
 
 The Quiz App is a mobile application built using Flutter and Dart that allows users to test their knowledge by taking quizzes on various topics. The app provides a fun and engaging way for users to challenge themselves and learn new things. 🚀📚
